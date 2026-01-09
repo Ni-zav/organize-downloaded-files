@@ -1,0 +1,14 @@
+# Git Ignore - Downloads Organizer
+# Ignore all files and folders except README.md and organize_files.py
+
+# Ignore everything
+*
+*/
+
+# But not these files
+!README.md
+!organize_files.py
+!.gitignore
+
+# Ensure directories are not tracked
+# (they'll be created as needed)
