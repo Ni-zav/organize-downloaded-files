@@ -34,6 +34,7 @@ DONT_MOVE_FILES = {
     'Thumbs.db',
     'README.md',
     'ORGANIZATION_SUMMARY.txt',
+    '.gitignore',
 }
 
 # Existing folders to preserve (don't move these)
