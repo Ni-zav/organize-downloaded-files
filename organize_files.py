@@ -32,6 +32,8 @@ DONT_MOVE_FILES = {
     'organize_files.py',
     'desktop.ini',
     'Thumbs.db',
+    'README.md',
+    'ORGANIZATION_SUMMARY.txt',
 }
 
 # Existing folders to preserve (don't move these)
@@ -125,6 +127,10 @@ def consolidate_folders(download_path, dry_run=False):
         if not old_path.exists():
             continue
         
+        # Skip if old folder is actually .git
+        if old_path.name == '.git':
+            continue
+        
         print(f"\nMoving files from {old_folder}/ -> {new_folder}/")
         print("-" * 70)
         
@@ -190,6 +196,10 @@ def organize_files(download_path, dry_run=False):
     
     # Process files in the download folder
     for item in download_path.iterdir():
+        # Skip .git folder (git repository)
+        if item.is_dir() and item.name == '.git':
+            continue
+        
         # Skip directories that should be preserved
         if item.is_dir() and item.name in PRESERVE_FOLDERS:
             continue

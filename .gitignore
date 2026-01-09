@@ -10,5 +10,6 @@
 !organize_files.py
 !.gitignore
 
-# Ensure directories are not tracked
-# (they'll be created as needed)
+# Always ignore git folder (don't let script move it)
+.git/
+.git
