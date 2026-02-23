@@ -35,6 +35,7 @@ DONT_MOVE_FILES = {
     'README.md',
     'ORGANIZATION_SUMMARY.txt',
     '.gitignore',
+    'run_organize_files.bat',
 }
 
 # Existing folders to preserve (don't move these)
