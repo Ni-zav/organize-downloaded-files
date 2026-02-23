@@ -9,6 +9,7 @@
 !README.md
 !organize_files.py
 !.gitignore
+!run_organize_files.bat
 
 # Always ignore git folder (don't let script move it)
 .git/
